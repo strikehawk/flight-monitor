@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'lib-map-lib',
+  selector: "lib-map-lib",
   template: `
     <p>
       map-lib works!

@@ -103,6 +103,15 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/flight-monitor/**/*.ts",
+              "projects/flight-monitor/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -133,6 +142,15 @@
             "main": "projects/map-lib/src/test.ts",
             "tsConfig": "projects/map-lib/tsconfig.spec.json",
             "karmaConfig": "projects/map-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/map-lib/**/*.ts",
+              "projects/map-lib/**/*.html"
+            ]
           }
         }
       }

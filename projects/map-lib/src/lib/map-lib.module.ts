@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { MapLibComponent } from './map-lib.component';
+import { NgModule } from "@angular/core";
+import { MapLibComponent } from "./map-lib.component";
 
 
 
