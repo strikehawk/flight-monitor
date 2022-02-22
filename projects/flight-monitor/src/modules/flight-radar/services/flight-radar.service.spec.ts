@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { FlightRadarService } from './flight-radar.service';
+import { FlightRadarService } from "./flight-radar.service";
 
-describe('FlightRadarService', () => {
+describe("FlightRadarService", () => {
   let service: FlightRadarService;
 
   beforeEach(() => {
@@ -10,7 +10,7 @@ describe('FlightRadarService', () => {
     service = TestBed.inject(FlightRadarService);
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(service).toBeTruthy();
   });
 });

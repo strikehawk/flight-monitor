@@ -2,8 +2,13 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const FLIGHT_RADAR = {
+  baseUrl: "http://localhost:8081/proxy/v0/flight-radar"
+};
+
 export const environment = {
-  production: false
+  production: false,
+  flightRadar: FLIGHT_RADAR
 };
 
 /*

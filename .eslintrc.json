@@ -14,13 +14,6 @@
       "@angular-eslint"
   ],
   "rules": {
-      "@typescript-eslint/strict-boolean-expressions": [
-          2,
-          {
-              "allowString" : false,
-              "allowNumber" : false
-          }
-      ],
       "quotes": ["warn", "double", { "allowTemplateLiterals": true }]
   },
 

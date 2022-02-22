@@ -10,6 +10,9 @@ import { MapViewComponent } from "./components/map-view/map-view.component";
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MapViewComponent
   ]
 })
 export class FlightRadarModule { }
