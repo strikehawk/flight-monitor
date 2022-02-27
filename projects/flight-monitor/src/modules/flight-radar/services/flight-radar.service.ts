@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { lastValueFrom } from "rxjs";
 
-import { environment } from "projects/flight-monitor/src/environments/environment";
+import { environment } from "../../../environments/environment";
 import { BoundingBox } from "../../shared/model/map";
 import { FlightRadarQueryResponse } from "../model/flight-radar";
 import response from "../../../../../../samples/flightradar24/flight-radar-response2.json";
@@ -20,7 +20,7 @@ export interface QueryOptions {
   providedIn: "root"
 })
 export class FlightRadarService {
-  private _fakeData = false;
+  private _fakeData = true;
 
   constructor(
     private http: HttpClient

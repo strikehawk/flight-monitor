@@ -12,6 +12,12 @@
     "noImplicitReturns": false,
     "noImplicitAny": false,
     "paths": {
+      "*": [
+        "node_modules/@types"
+      ],
+      "@luma.gl/webgl": [
+        "node_modules/@types/luma.gl__webgl"
+      ],
       "map-lib": [
         "dist/map-lib/map-lib",
         "dist/map-lib"

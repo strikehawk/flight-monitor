@@ -1,8 +1,8 @@
 {
   "root": true,
   "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -10,11 +10,16 @@
     "extraFileExtensions": [".html"]
   },
   "plugins": [
-      "@typescript-eslint",
-      "@angular-eslint"
+    "@typescript-eslint",
+    "@angular-eslint"
   ],
   "rules": {
-      "quotes": ["warn", "double", { "allowTemplateLiterals": true }]
+    "@typescript-eslint/no-explicit-any": ["off"],
+    "@typescript-eslint/ban-types": ["off"],
+    "@typescript-eslint/no-inferrable-types": ["off"],
+    "quotes": ["warn", "double", {
+      "allowTemplateLiterals": true
+    }]
   },
 
   "ignorePatterns": [
