@@ -1,0 +1,269 @@
+$flags-images-path: "." !default; //Override this variable in your .scss to use bower.
+.f16 {
+
+    .flag{
+      background:url(#{$flags-images-path}/flags16.png) no-repeat;
+      height: 16px;
+      width: 16px;
+    }
+
+    ._African_Union{background-position:0 -16px;}
+    ._Arab_League{background-position:0 -32px;}
+    ._ASEAN{background-position:0 -48px;}
+    ._CARICOM{background-position:0 -64px;}
+    ._CIS{background-position:0 -80px;}
+    ._Commonwealth{background-position:0 -96px;}
+    ._England{background-position:0 -112px;}
+    ._European_Union{background-position:0 -128px;} .eu{@extend ._European_Union;}
+    ._Islamic_Conference{background-position:0 -144px;}
+    ._Kosovo{background-position:0 -160px;}
+    ._NATO{background-position:0 -176px;}
+    ._Northern_Cyprus{background-position:0 -192px;}
+    ._Northern_Ireland{background-position:0 -208px;}
+    ._Olimpic_Movement{background-position:0 -224px;}
+    ._OPEC{background-position:0 -240px;}
+    ._Red_Cross{background-position:0 -256px;}
+    ._Scotland{background-position:0 -272px;}
+    ._Somaliland{background-position:0 -288px;}
+    ._Tibet{background-position:0 -304px;}
+    ._United_Nations{background-position:0 -320px;}
+    ._Wales{background-position:0 -336px;}
+
+	.abw {background-position: 0 -560px;}
+	.afg {background-position: 0 -384px;}
+	.ago {background-position: 0 -464px;}
+	.aia {background-position: 0 -416px;}
+	.ala {background-position: 0 -576px;}
+	.alb {background-position: 0 -432px;}
+	.and {background-position: 0 -352px;}
+	.are {background-position: 0 -368px;}
+	.arg {background-position: 0 -496px;}
+	.arm {background-position: 0 -448px;}
+	.asm {background-position: 0 -512px;}
+	.ata {background-position: 0 -480px;}
+	.atg {background-position: 0 -400px;}
+	.atn {background-position: 0 -2768px;}
+	.aus {background-position: 0 -544px;}
+	.aut {background-position: 0 -528px;}
+	.aze {background-position: 0 -592px;}
+	.bdi {background-position: 0 -720px;}
+	.bel {background-position: 0 -656px;}
+	.ben {background-position: 0 -736px;}
+	.bes {background-position: 0 -2752px;}
+	.bfa {background-position: 0 -672px;}
+	.bgd {background-position: 0 -640px;}
+	.bgr {background-position: 0 -688px;}
+	.bhr {background-position: 0 -704px;}
+	.bhs {background-position: 0 -816px;}
+	.bih {background-position: 0 -608px;}
+	.blm {background-position: 0 -1424px;}
+	.blr {background-position: 0 -864px;}
+	.blz {background-position: 0 -880px;}
+	.bmu {background-position: 0 -752px;}
+	.bol {background-position: 0 -784px;}
+	.bra {background-position: 0 -800px;}
+	.brb {background-position: 0 -624px;}
+	.brn {background-position: 0 -768px;}
+	.btn {background-position: 0 -832px;}
+	.bvt {background-position: 0 -2768px;}
+	.bwa {background-position: 0 -848px;}
+	.can {background-position: 0 -896px;}
+	.che {background-position: 0 -960px;}
+	.chl {background-position: 0 -1008px;}
+	.chn {background-position: 0 -1040px;}
+	.civ {background-position: 0 -976px;}
+	.cmr {background-position: 0 -1024px;}
+	.cod {background-position: 0 -912px;}
+	.cog {background-position: 0 -944px;}
+	.cok {background-position: 0 -992px;}
+	.col {background-position: 0 -1056px;}
+	.com {background-position: 0 -2064px;}
+	.cpt {background-position: 0 -1424px;}
+	.cpv {background-position: 0 -1104px;}
+	.cri {background-position: 0 -1072px;}
+	.cub {background-position: 0 -1088px;}
+	.cuw {background-position: 0 -3920px;}
+	.cym {background-position: 0 -2144px;}
+	.cyp {background-position: 0 -1120px;}
+	.cze {background-position: 0 -1136px;}
+	.deu {background-position: 0 -1152px;}
+	.dji {background-position: 0 -1168px;}
+	.dma {background-position: 0 -1200px;}
+	.dnk {background-position: 0 -1184px;}
+	.dom {background-position: 0 -1216px;}
+	.dza {background-position: 0 -1232px;}
+	.ecu {background-position: 0 -1248px;}
+	.egy {background-position: 0 -1280px;}
+	.eri {background-position: 0 -1312px;}
+	.esh {background-position: 0 -1296px;}
+	.esp {background-position: 0 -1328px;}
+	.est {background-position: 0 -1264px;}
+	.eth {background-position: 0 -1344px;}
+	.fin {background-position: 0 -1360px;}
+	.fji {background-position: 0 -1376px;}
+	.fra {background-position: 0 -1424px;}
+	.fro {background-position: 0 -1408px;}
+	.fsm {background-position: 0 -1392px;}
+	.gab {background-position: 0 -1440px;}
+	.gbr {background-position: 0 -1456px;}
+	.geo {background-position: 0 -1488px;}
+	.ggy {background-position: 0 -1504px;}
+	.gha {background-position: 0 -1520px;}
+	.gib {background-position: 0 -1536px;}
+	.gin {background-position: 0 -1584px;}
+	.glp {background-position: 0 -1600px;}
+	.gmb {background-position: 0 -1568px;}
+	.gnb {background-position: 0 -1680px;}
+	.gnq {background-position: 0 -1616px;}
+	.grc {background-position: 0 -1632px;}
+	.grd {background-position: 0 -1472px;}
+	.grl {background-position: 0 -1552px;}
+	.gtm {background-position: 0 -1648px;}
+	.gum {background-position: 0 -1664px;}
+	.guy {background-position: 0 -1696px;}
+	.hkg {background-position: 0 -1712px;}
+	.hnd {background-position: 0 -1728px;}
+	.hrv {background-position: 0 -1744px;}
+	.hti {background-position: 0 -1760px;}
+	.hun {background-position: 0 -1776px;}
+	.idn {background-position: 0 -1792px;}
+	.irl {background-position: 0 -1808px;}
+	.imn {background-position: 0 -1840px;}
+	.ind {background-position: 0 -1856px;}
+	.irn {background-position: 0 -1888px;}
+	.irq {background-position: 0 -1872px;}
+	.isl {background-position: 0 -1904px;}
+	.isr {background-position: 0 -1824px;}
+	.ita {background-position: 0 -1920px;}
+	.jam {background-position: 0 -1952px;}
+	.jey {background-position: 0 -1936px;}
+	.jor {background-position: 0 -1968px;}
+	.jpn {background-position: 0 -1984px;}
+	.kaz {background-position: 0 -2160px;}
+	.ken {background-position: 0 -2000px;}
+	.kgz {background-position: 0 -2016px;}
+	.khm {background-position: 0 -2032px;}
+	.kir {background-position: 0 -2048px;}
+	.kna {background-position: 0 -2080px;}
+	.kor {background-position: 0 -2112px;}
+	.kwt {background-position: 0 -2128px;}
+	.lao {background-position: 0 -2176px;}
+	.lbn {background-position: 0 -2192px;}
+	.lbr {background-position: 0 -2256px;}
+	.lby {background-position: 0 -2336px;}
+	.lca {background-position: 0 -2208px;}
+	.lie {background-position: 0 -2224px;}
+	.lka {background-position: 0 -2240px;}
+	.lso {background-position: 0 -2272px;}
+	.ltu {background-position: 0 -2288px;}
+	.lux {background-position: 0 -2304px;}
+	.lva {background-position: 0 -2320px;}
+	.mac {background-position: 0 -2496px;}
+	.maf {background-position: 0 -1424px;}
+	.mar {background-position: 0 -2352px;}
+	.mco {background-position: 0 -1792px;}
+	.mda {background-position: 0 -2368px;}
+	.mdg {background-position: 0 -2400px;}
+	.mdv {background-position: 0 -2592px;}
+	.mex {background-position: 0 -2624px;}
+	.mhl {background-position: 0 -2416px;}
+	.mkd {background-position: 0 -2432px;}
+	.mli {background-position: 0 -2448px;}
+	.mlt {background-position: 0 -2560px;}
+	.mmr {background-position: 0 -2464px;}
+	.mne {background-position: 0 -2384px;}
+	.mng {background-position: 0 -2480px;}
+	.moz {background-position: 0 -2656px;}
+	.mrt {background-position: 0 -2528px;}
+	.msr {background-position: 0 -2544px;}
+	.mtq {background-position: 0 -2512px;}
+	.mus {background-position: 0 -2576px;}
+	.mwi {background-position: 0 -2608px;}
+	.mys {background-position: 0 -2640px;}
+	.myt {background-position: 0 -1424px;}
+	.nam {background-position: 0 -2672px;}
+	.ncl {background-position: 0 -2688px;}
+	.ner {background-position: 0 -2704px;}
+	.nga {background-position: 0 -2720px;}
+	.nic {background-position: 0 -2736px;}
+	.niu {background-position: 0 -3952px;}
+	.nld {background-position: 0 -2752px;}
+	.nor {background-position: 0 -2768px;}
+	.npl {background-position: 0 -2784px;}
+	.nru {background-position: 0 -2800px;}
+	.nzl {background-position: 0 -2816px;}
+	.omn {background-position: 0 -2832px;}
+	.pak {background-position: 0 -2928px;}
+	.pan {background-position: 0 -2848px;}
+	.per {background-position: 0 -2864px;}
+	.phl {background-position: 0 -2912px;}
+	.plw {background-position: 0 -3008px;}
+	.png {background-position: 0 -2896px;}
+	.pol {background-position: 0 -2944px;}
+	.pri {background-position: 0 -2960px;}
+	.prk {background-position: 0 -2096px;}
+	.prt {background-position: 0 -2992px;}
+	.pry {background-position: 0 -3024px;}
+	.pse {background-position: 0 -2976px;}
+	.pyf {background-position: 0 -2880px;}
+	.qat {background-position: 0 -3040px;}
+	.rca {background-position: 0 -928px;}
+	.reu {background-position: 0 -3056px;}
+	.rou {background-position: 0 -3072px;}
+	.rus {background-position: 0 -3104px;}
+	.rwa {background-position: 0 -3120px;}
+	.sau {background-position: 0 -3136px;}
+	.sdn {background-position: 0 -3184px;}
+	.sen {background-position: 0 -3296px;}
+	.sgp {background-position: 0 -3216px;}
+	.shn {background-position: 0 -1456px;}
+	.sjm {background-position: 0 -2768px;}
+	.slb {background-position: 0 -3152px;}
+	.sle {background-position: 0 -3264px;}
+	.slv {background-position: 0 -3360px;}
+	.smr {background-position: 0 -3280px;}
+	.som {background-position: 0 -3312px;}
+	.srb {background-position: 0 -3088px;}
+	.ssd {background-position: 0 -3936px;}
+	.stp {background-position: 0 -3344px;}
+	.sur {background-position: 0 -3328px;}
+	.svk {background-position: 0 -3248px;}
+	.svn {background-position: 0 -3232px;}
+	.swe {background-position: 0 -3200px;}
+	.swz {background-position: 0 -3392px;}
+	.sxm {background-position: 0 -3904px;}
+	.syc {background-position: 0 -3168px;}
+	.syr {background-position: 0 -3376px;}
+	.tca {background-position: 0 -3408px;}
+	.tcd {background-position: 0 -3424px;}
+	.tgo {background-position: 0 -3440px;}
+	.tha {background-position: 0 -3456px;}
+	.tjk {background-position: 0 -3472px;}
+	.tkm {background-position: 0 -3504px;}
+	.tls {background-position: 0 -3488px;}
+	.ton {background-position: 0 -3536px;}
+	.tto {background-position: 0 -3568px;}
+	.tun {background-position: 0 -3520px;}
+	.tur {background-position: 0 -3552px;}
+	.tuv {background-position: 0 -3584px;}
+	.twn {background-position: 0 -3600px;}
+	.tza {background-position: 0 -3616px;}
+	.uga {background-position: 0 -3648px;}
+	.ukr {background-position: 0 -3632px;}
+	.ury {background-position: 0 -3680px;}
+	.usa {background-position: 0 -3664px;}
+	.uzb {background-position: 0 -3696px;}
+	.vat {background-position: 0 -3712px;}
+	.vct {background-position: 0 -3728px;}
+	.ven {background-position: 0 -3744px;}
+	.vgb {background-position: 0 -3760px;}
+	.vir {background-position: 0 -3776px;}
+	.vnm {background-position: 0 -3792px;}
+	.vut {background-position: 0 -3808px;}
+	.wsm {background-position: 0 -3824px;}
+	.yem {background-position: 0 -3840px;}
+	.zaf {background-position: 0 -3856px;}
+	.zmb {background-position: 0 -3872px;}
+	.zwe {background-position: 0 -3888px;}
+
+} // .f16

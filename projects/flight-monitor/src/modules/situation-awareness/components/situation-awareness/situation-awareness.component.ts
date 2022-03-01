@@ -8,6 +8,7 @@ import { debounceTime, Subscription } from "rxjs";
 
 import { MapContentProvider } from "../../model/map-content.provider";
 import { AircraftTypeService } from "../../../flight-radar/services/aircraft-type.service";
+import { ViewContainerDirective } from "../../../shared/directives/view-container.directive";
 
 @Component({
   selector: "app-situation-awareness",
@@ -19,6 +20,9 @@ export class SituationAwarenessComponent implements AfterViewInit, OnDestroy {
   public mapView: MapViewComponent;
 
   public readonly mapContentProvider: MapContentProvider;
+
+  @ViewChild(ViewContainerDirective, {static: true})
+  public viewContainerDirective!: ViewContainerDirective;
 
   private _lastBbox: BoundingBox;
 
@@ -36,6 +40,8 @@ export class SituationAwarenessComponent implements AfterViewInit, OnDestroy {
     if (!this.mapView) {
       return;
     }
+
+    this.mapContentProvider.viewContainerRef = this.viewContainerDirective.viewContainerRef;
 
     this._viewExtentChangedSub = this.mapView.$extentChangedThrottled.pipe(
       debounceTime(2000)

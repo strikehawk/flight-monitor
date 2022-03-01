@@ -1,6 +1,9 @@
+import { Type, ViewContainerRef } from "@angular/core";
 import { Layer } from "@deck.gl/core";
+import { PickInfo } from "@deck.gl/core/lib/deck";
 import { LayerProps } from "@deck.gl/core/lib/layer";
 import { TileLayer } from "@deck.gl/geo-layers";
+import { AircraftTooltipComponent } from "../../flight-radar/components/aircraft-tooltip/aircraft-tooltip.component";
 import { AircraftTypePack, FlightRadarLayer } from "../../flight-radar/map/flight-radar.layer";
 import { FlightRadarAircraftData } from "../../flight-radar/model/flight-radar";
 import { AircraftTypeData, AircraftTypeService } from "../../flight-radar/services/aircraft-type.service";
@@ -22,6 +25,16 @@ export class MapContentProvider {
     if (forceUpdate) {
       this._forceUpdate();
     }
+  }
+
+  private _viewContainerRef: ViewContainerRef;
+
+  public get viewContainerRef(): ViewContainerRef {
+    return this._viewContainerRef;
+  }
+
+  public set viewContainerRef(value: ViewContainerRef) {
+    this._viewContainerRef = value;
   }
 
   /* global window */
@@ -50,6 +63,22 @@ export class MapContentProvider {
     }
 
     return layers;
+  }
+
+  public getTooltip(info: PickInfo<any>): null | string | { text?: string, html?: string, className?: string, style?: any } {
+    if (info.object && info.layer.id === "flightRadar") {
+      // return {
+      //   html: `<div style="font-weight: bold;font-size: 12px;">${info.object.callsign}</div><div>${info.object.aircraftType}</div>`,
+      //   style: {
+      //     fontSize: "10px",
+      //     fontFamily: "Verdana",
+      //     padding: "4px"
+      //   }
+      // };
+      return this._getAircraftTooltip(info.object);
+    }
+
+    return null;
   }
 
   public setAircraftData(data?: FlightRadarAircraftData[]): void {
@@ -114,7 +143,23 @@ export class MapContentProvider {
     return new FlightRadarLayer({
       id: "flightRadar",
       aircraftPacks: aircraftPacks,
-      data: data
+      data: data,
+      pickable: true
     });
+  }
+
+  private _getAircraftTooltip(aircraft: FlightRadarAircraftData): null | string | { text?: string, html?: string, className?: string, style?: any } {
+    if (!this._viewContainerRef) {
+      return null;
+    }
+
+    this.viewContainerRef.clear();
+    const componentRef = this._viewContainerRef.createComponent<AircraftTooltipComponent>(AircraftTooltipComponent);
+    componentRef.instance.aircraft = aircraft;
+    componentRef.changeDetectorRef.detectChanges();
+
+    return {
+      html: componentRef.location.nativeElement.outerHTML
+    };
   }
 }

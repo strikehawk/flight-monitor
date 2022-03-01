@@ -6,6 +6,7 @@ import { FlightRadarModule } from "../modules/flight-radar/flight-radar.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./components/app-root/app.component";
 import { SituationAwarenessModule } from "../modules/situation-awareness/situation-awareness.module";
+import { SharedModule } from "../modules/shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SituationAwarenessModule } from "../modules/situation-awareness/situati
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    SharedModule,
     FlightRadarModule,
     SituationAwarenessModule
   ],

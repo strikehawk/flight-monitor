@@ -1,0 +1,11 @@
+<div fxLayout="row" fxLayoutAlign="start baseline">
+  <div class="callsign">{{ aircraft.callsign }}</div>&nbsp;/&nbsp;&nbsp;<div class="flight">{{ aircraft.flight }}</div>
+</div>
+<div *ngIf="!!airline" class="f16" fxLayout="column">
+  <div class="airline">{{ airline?.name }}</div>
+  <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px">
+    <div class="flag" [ngClass]="[true ? (airline.isoAlpha3 | lowercase) : '']"></div>
+    <div>{{ airline?.country }}</div>
+  </div>
+</div>
+<div>{{ aircraftType?.manufacturerCode }} {{ aircraftType?.modelFullName }}</div>

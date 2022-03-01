@@ -1,8 +1,10 @@
 import { Injectable } from "@angular/core";
 import data from "../../../../../../samples/icao-aircraft-type-mesh.json";
+import aircraftTypes from "../../../../../../samples/icao-aircraft-types.json";
 import meshes from "../../../../../../samples/meshes.json";
+import { AircraftType } from "../model/general";
 
-export interface AircraftTypeData {
+export interface AircraftTypeData extends AircraftType {
   /**
    * ICAO aircraft type designator.
    */
@@ -44,6 +46,17 @@ export class AircraftTypeService {
     for (const aircraftType of (data as AircraftTypeData[])) {
       aircraftType.size = meshesMap.get(aircraftType.filename).size;
       this.aircraftTypes.set(aircraftType.designator, aircraftType);
+    }
+
+    let aircraftType: AircraftTypeData | undefined;
+    for (const type of (aircraftTypes as AircraftType[])) {
+      aircraftType = this.aircraftTypes.get(type.designator);
+
+      if (!aircraftType) {
+        continue;
+      }
+
+      Object.assign(aircraftType, type);
     }
   }
 }

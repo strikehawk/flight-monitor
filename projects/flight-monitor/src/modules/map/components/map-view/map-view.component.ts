@@ -111,7 +111,10 @@ export class MapViewComponent implements AfterViewInit, OnDestroy {
     }
 
     const layers = this._mapContentProvider.getLayers();
-    this._deck?.setProps({ layers })
+    this._deck?.setProps({
+      layers,
+      getTooltip: info => this._mapContentProvider.getTooltip(info)
+    })
   }
 
   private _getViewportBounds(): BoundingBox | undefined {

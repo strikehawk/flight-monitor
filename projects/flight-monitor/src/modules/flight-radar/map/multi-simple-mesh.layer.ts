@@ -7,6 +7,7 @@ import { OBJLoader } from "@loaders.gl/obj";
 import { Viewport } from "../../map/types/deck.gl";
 
 import { BoundingBox } from "../../shared/model/map";
+import { PickInfo, PickMode } from "@deck.gl/core/lib/deck";
 
 export interface MeshLayerData<D> {
   id: string;
@@ -82,6 +83,10 @@ export class MultiSimpleMeshLayer<D> extends CompositeLayer<D, MultiSimpleMeshLa
     return layers;
   }
 
+  public override getPickingInfo({ info, mode, sourceLayer }: { info: PickInfo<D>; mode: PickMode; sourceLayer: Layer<any, LayerProps<any>>; }): PickInfo<D> {
+      return super.getPickingInfo({info, mode, sourceLayer});
+  }
+
   private _getState(props: MultiSimpleMeshLayerProps<D>, bounds: BoundingBox, zoom: number): MultiSimpleMeshLayerState<D> {
     const state: MultiSimpleMeshLayerState<D> = Object.assign(this.state, {
       packs: props.packs,
@@ -98,9 +103,7 @@ export class MultiSimpleMeshLayer<D> extends CompositeLayer<D, MultiSimpleMeshLa
       // `getSubLayerProps` will concat the parent layer id with this id
       id: pack.id,
       data: pack.data,
-      pickable: true,
-      autoHighlight: true,
-      highlightColor: [100, 70, 9, 255],
+      pickable: props.pickable,
 
       mesh: pack.mesh,
       loaders: [OBJLoader],
@@ -115,6 +118,9 @@ export class MultiSimpleMeshLayer<D> extends CompositeLayer<D, MultiSimpleMeshLa
     return new LineLayer<D>(this.getSubLayerProps<D>({
       id: "leader-line",
       data: state.data,
+
+      pickable: true,
+      autoHighlight: true,
 
       getWidth: 1,
       getSourcePosition: props.getGroundPosition,

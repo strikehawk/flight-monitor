@@ -137,6 +137,7 @@ export class FlightRadarLayer extends CompositeLayer<FlightRadarAircraftData, Fl
       packs: state.aircraftPacks,
       data: state.data,
       showLeaderLine: true,
+      pickable: true,
       getSizeScale: this._getSizeScale,
       getPosition: d => [d.longitude, d.latitude, d.altitude / 0.33],
       getGroundPosition: d => [d.longitude, d.latitude, 0],
